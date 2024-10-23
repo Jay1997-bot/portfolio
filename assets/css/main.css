@@ -726,51 +726,39 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-.about .container {
-  background-color: var(--surface-color);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-}
-
 .about .skills-content h5 {
   font-size: 18px;
   font-weight: 700;
   margin: 30px 0 15px 0;
 }
 
-.about .progress {
-  height: 36px;
-  display: block;
-  background: none;
-  border-radius: 0;
-  margin-top: 15px;
+.about .skills-content .row {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.about .progress .skill {
-  color: var(--default-color);
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
+.about .skills-content .col-lg-6 {
+  padding: 10px;
+}
+
+.about .skills-content .skill-item {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.about .skills-content .skill-item .skill {
+  font-size: 30px;
   font-weight: 600;
-  font-family: var(--heading-font);
+  display: flex;
+  align-items: center;
+  color: var(--default-color);
 }
 
-.about .progress .skill .val {
-  float: right;
-  font-style: normal;
-}
-
-.about .progress-bar-wrap {
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
-  height: 10px;
-}
-
-.about .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: var(--accent-color);
+.about .skills-content .skill-item i {
+  font-size: 24px;
+  margin-right: 10px;
+  color: var(--accent-color);
 }
 
 .about .about-me h4 {
@@ -795,6 +783,12 @@ section,
 
 .about .about-me p {
   font-size: 18px;
+}
+
+.about .container {
+  background-color: var(--surface-color);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 
 /*--------------------------------------------------------------
@@ -960,8 +954,7 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
 
-/*--------------------------------------------------------------
-# Portfolio Section
+/*--------------------------------------------------------------Section
 --------------------------------------------------------------*/
 .portfolio .portfolio-filters {
   padding: 0;
